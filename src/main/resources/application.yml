@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8080}
+spring:
+  datasource:
+    db-kind: mysql
+    username: dev
+    password: sql123
+    jdbc:
+      url: jdbc:mysql://localhost:3306/devdb
+      max-size: 10
+  hibernate-orm:
+    hibernate:
+      ddl-auto: drop-and-create
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
